@@ -8,14 +8,11 @@ Cypress.Commands.add('login', (user, pass) => {
 
 describe('Cerrar sesión', function() {
   beforeEach(() => {
-    cy.login('luis.mora@example.com', 'Abcdef@123'); // Reemplaza 'TuUsuario' y 'TuContraseña' con credenciales válidas
+    cy.login('luis.mora@example.com', 'Abcdef@123');
   })
 
   it('Cierra la sesión exitosamente', function() {
-    // Imagina que el usuario ya ha iniciado sesión y está en la página de inicio
     cy.visit('http://199.187.208.16/qa-test/home.php')
-
-    // Click en el boton para cerrar sesion
     cy.get('.btn').click()
   })
 })
